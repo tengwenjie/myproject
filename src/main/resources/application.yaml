@@ -1,0 +1,18 @@
+server:
+  port:
+    9090
+spring:
+  application:
+    name: myproject
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/testdb?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=utf8
+    username: root
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # 开发期可用；生产建议用 Flyway/Liquibase
+    show-sql: true
+    properties:
+      hibernate.format_sql: true

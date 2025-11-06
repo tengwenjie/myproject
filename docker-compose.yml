@@ -1,0 +1,10 @@
+services:
+  app:
+    image: bigpang0221/my_repo:myjava
+    container_name: myjava
+    ports:
+      - "8080:9090"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://host.docker.internal:3306/testdb?useSSL=false&serverTimezone=Asia/Tokyo&allowPublicKeyRetrieval=true&connectTimeout=30000&socketTimeout=30000"
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
